@@ -13,6 +13,8 @@ public class BookRepositoryImpl implements BookRepository{
     public BookRepositoryImpl(){
         List<Book> books = Collections.synchronizedList(new ArrayList<Book>());
         books.add(new Book(1,"Java",332));
+        books.add(new Book(2,"SpringBoot",22));
+        books.add(new Book(3,"MySQL",123));
         bookList = new BookList();
         bookList.setBooks(books);
     }
