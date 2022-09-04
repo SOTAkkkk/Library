@@ -2,12 +2,12 @@ package com.example.Library;
 
 public class Book {
     private int bookId;
-    private String boookName;
+    private String bookName;
     private int bookPages;
 
-    public Book(int bookId, String boookName, int bookPages) {
+    public Book(int bookId, String bookName, int bookPages) {
         this.bookId = bookId;
-        this.boookName = boookName;
+        this.bookName = bookName;
         this.bookPages = bookPages;
     }
 
@@ -19,12 +19,12 @@ public class Book {
         this.bookId = bookId;
     }
 
-    public String getBoookName() {
-        return boookName;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBoookName(String boookName) {
-        this.boookName = boookName;
+    public void setBookName(String boookName) {
+        this.bookName = boookName;
     }
 
     public int getBookPages() {
