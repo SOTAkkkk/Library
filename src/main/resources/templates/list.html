@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<a th:href="@{index}">戻る</a>
+<h1>図書一覧</h1>
+<table>
+    <thead>
+    <tr>
+        <th>図書ID</th>
+        <th>図書名</th>
+        <th>ページ数</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="book : ${bookList.books}">
+        <td th:text="${book.bookId}"></td>
+        <td th:text="${book.bookName}"></td>
+        <td th:text="${book.bookPages}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

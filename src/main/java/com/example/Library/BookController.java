@@ -20,7 +20,8 @@ public class BookController {
     }
 
     @GetMapping("list")
-    public String List(){
+    public String List(Model model){
+        model.addAttribute("bookList",bookService.findAll());
         return "list";
     }
 

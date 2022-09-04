@@ -13,7 +13,7 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public BookList findAll() {
-        return null;
+        return bookRepository.getAll();
     }
 
     @Override
