@@ -11,6 +11,10 @@ public class Book {
         this.bookPages = bookPages;
     }
 
+    public Book(){
+
+    }
+
     public int getBookId() {
         return bookId;
     }

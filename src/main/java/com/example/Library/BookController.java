@@ -3,6 +3,7 @@ package com.example.Library;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -26,8 +27,15 @@ public class BookController {
     }
 
     @GetMapping("add")
-    public String add(){
+    public String add(Model model){
+        model.addAttribute("book",new Book());
         return "add";
+    }
+
+    @PostMapping("add")
+    public String add(Book book){
+        bookService.addBok(book);
+        return "redirect:list";
     }
 
 }
