@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}" rel="stylesheet" >
+</head>
+<body>
+<a th:href="@{index}">戻る</a>
+<h1>図書新規登録</h1>
+<a th:href="@{list}" class="btn-link">図書一覧</a>
+<form th:action="@{add}" method="post">
+    <label for="bookName">図書名:</label>
+    <input type="text" id="bookName" name="bookName" th:value="${book.bookName}"/><br>
+    <label for="bookPages">ページ数:</label>
+    <input type="text" id="bookPages" name="bookPages" th:value="${book.bookPages}"/><br>
+    <button type="submit" id="submit">登録</button>
+    <br>
+</form>
+
+<script th:src="@{/webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
+</body>
+</html>
