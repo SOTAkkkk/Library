@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link th:href="@{/webjars/bootstrap/5.2.0/css/bootstrap.min.css}" rel="stylesheet" >
 </head>
 <body>
-<a th:href="@{index}">戻る</a>
+
 <h1>図書一覧</h1>
-<table>
+<table class="table table-striped">
     <thead>
     <tr>
         <th>図書ID</th>
@@ -23,5 +24,9 @@
     </tr>
     </tbody>
 </table>
+
+<a th:href="@{index}" class="btn-link">戻る</a>
+
+<script th:src="@{/webjars/bootstrap/5.2.0/js/bootstrap.min.js}"></script>
 </body>
 </html>
