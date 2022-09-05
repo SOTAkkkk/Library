@@ -18,6 +18,6 @@ public class BookServiceImpl implements BookService{
 
     @Override
     public void addBok(Book book) {
-
+        bookRepository.add(book);
     }
 }

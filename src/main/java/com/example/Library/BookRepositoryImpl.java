@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Repository
@@ -27,6 +28,12 @@ public class BookRepositoryImpl implements BookRepository{
 
     @Override
     public void add(Book book) {
-
+        int currentMaxId = bookList.getBooks()
+                .stream()
+                .map(b -> b.getBookId())
+                .max(Comparator.naturalOrder())
+                .orElse(0);
+        book.setBookId(currentMaxId+1);
+        bookList.getBooks().add(book);
     }
 }
